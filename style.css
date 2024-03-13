@@ -127,7 +127,7 @@
   .blanket{
     width: 100%;
     height: 200px;
-    background: url('/img/blanket.jpg') no-repeat;
+    background: url('./img/blanket.jpg') no-repeat;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
     position: relative;
@@ -135,7 +135,7 @@
   .beds{
     width: 100%;
     height: 200px;
-    background: url('/img/beds.jpg') no-repeat;
+    background: url('./img/beds.jpg') no-repeat;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
     position: relative;
@@ -143,7 +143,7 @@
   .bibs{
     width: 100%;
     height: 200px;
-    background: url('/img/bibs.jpg') no-repeat;
+    background: url('./img/bibs.jpg') no-repeat;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-size: cover;
     position: relative;

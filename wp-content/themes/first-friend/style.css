@@ -1,3 +1,320 @@
 /*
 Theme Name: First Friend
+Theme URI: https://example.com
+Author: Rohit Chauhan
+Author URI: https://example.com
+Description:  New Theme
+Version: 1.5
+Requires at least: 5.3
+Tested up to: 6.0
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom-menu, custom-logo, featured-image-header, footer-widgets, featured-images, theme-options, threaded-comments, translation-ready, blog, entertainment, news
+Text Domain: first-friendcl
 */
+
+/* Media captions */
+/* Accessibility */
+/* Text meant only for screen readers. */
+/* fallback */
+
+* {
+    margin: auto;
+    padding: auto;
+}
+
+.navbar{
+    margin: 1% auto;
+  }
+.search_product{
+    width: 100%;
+    min-width: 350px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-size: 17px;
+  background-color: #A670B4;
+  background-image: url('assets/img/search.png');
+  background-position: 5px 3px; 
+  background-repeat: no-repeat;
+  padding: 4px 20px 4px 40px;
+  border-color: transparent;
+  color: white;
+}
+.search_product:focus{
+    background-color: #A670B4;
+    border: none;
+    color: white;
+}
+.search_product::placeholder{
+    color: white;
+  }
+.menu-item{
+    padding: 0px 20px;
+  }
+.menu-item a{
+    color: #82597C;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.menu-item .active{
+    color: white !important;
+    background-color: #A670B4;
+    border-radius: 10px;   
+}
+.icon_account img{
+    padding: 0px 10px
+  }
+  .banner{
+    width: 100%;
+    height: auto;
+  }
+  .banner_rec{
+    width: 100%;
+    height: 32px;
+    background-color: #82597C;
+    position: absolute;
+    top: 0;
+  }
+  .banner-item{
+    width: 100%;
+    height: 560px;
+    position: relative;
+    background:url('./img/baby.jpg') no-repeat;
+    background-size: cover;
+  }
+  .show_now{
+    position: absolute;
+    bottom: 20%;
+    right: 9%;
+    text-decoration: none;
+    color: white;
+    background-color: #82597C;
+    font-size: 35px;
+    padding: 0px 30px;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+  .about{
+    padding: 3%;
+  }
+  .about h2{
+    color: #82597C;
+    font-size: 45px;
+    padding: 2% 0px;
+  }
+  .about_p{
+    line-height: 30px;
+    font-size: 15px;
+    text-align: justify;
+  }
+  .category{
+    padding: 0px 0px 3%;
+  }
+  .category h2{
+    color: #82597C;
+    font-size: 45px;
+  }
+  .blanket{
+    width: 100%;
+    height: 200px;
+    background: url('/img/blanket.jpg') no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-size: cover;
+    position: relative;
+  }
+  .beds{
+    width: 100%;
+    height: 200px;
+    background: url('/img/beds.jpg') no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-size: cover;
+    position: relative;
+  }
+  .bibs{
+    width: 100%;
+    height: 200px;
+    background: url('/img/bibs.jpg') no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-size: cover;
+    position: relative;
+  }
+  .category{
+    padding: 0px 0px 3%;
+  }
+  .category h2{
+    color: #82597C;
+    font-size: 45px;
+  }
+  .blanket{
+    width: 100%;
+    height: 200px;
+    background: url('./img/blanket.jpg') no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-size: cover;
+    position: relative;
+  }
+  .beds{
+    width: 100%;
+    height: 200px;
+    background: url('./img/beds.jpg') no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-size: cover;
+    position: relative;
+  }
+  .bibs{
+    width: 100%;
+    height: 200px;
+    background: url('./img/bibs.jpg') no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-size: cover;
+    position: relative;
+  }
+  .blanket h3{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    font-weight: 700;
+  }
+  .beds h3{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    font-weight: 700;
+  }
+  .bibs h3{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    font-weight: 700;
+  }
+  .cat_pad{
+    margin: 5% 0px; 
+  }
+  .happy{
+    display: block;
+    text-align: center;
+  }
+  .happy p{
+    color: #82597C;
+    font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 16px;
+  }
+  .new{
+    padding: 0px 0px 3% 0px;
+  }
+  .new h2{
+    color: #82597C;
+    font-size: 45px;
+    padding: 2% 0px;
+  }
+  .section img{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+  }
+  .section{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0px 10%;
+    border-radius: 15px;
+  }
+  .section h3{
+    padding: 4% 10px 0px;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-style: bold;
+    color: #7F5B7A;
+  }
+  .section p{
+    padding: 0px 10px 3%;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #666666;
+  }
+  .view{
+    display: block;
+   text-align: center;
+   padding: 2% 0px 0px 0px;
+ }
+ .view a{
+   text-decoration: none;
+   color: white;
+   background-color: #82597C;
+   font-size: 20px;
+   padding: 5px 20px;
+   border-radius: 50px;
+   font-family: "Roboto", sans-serif;
+     font-weight: 300;
+     font-style: normal;
+ }
+ footer{
+    background-color: #82597C;
+    color: white;
+    text-align: center;
+  }
+  .section_footer ul{
+    list-style-type: none;
+  }
+  footer{
+    background-color: #82597C;
+    color: white;
+    text-align: center;
+  }
+  .section_footer{
+    padding: 5% 0px;
+  }
+  .section_footer ul{
+    list-style-type: none;
+    line-height: 30px;
+  }
+  .reviews{
+    position: relative;
+  }
+  .reviews h2{
+    color: #82597C;
+    font-size: 45px;
+    padding: 2% 0px;
+  }
+  .follow_us{
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .icongroup{
+    position: absolute;
+  bottom: -5%;
+  width: 100%;
+  z-index: -1;
+  }
+  .join{
+    padding: 5% 0px 6%;
+  }
+  .search_stay{
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 17px;
+    background-color: #88547D;
+    background-image: url('./img/email.png');
+    background-position: 20px 20px;
+    background-repeat: no-repeat;
+    padding: 20px 20px 20px 50px;
+    border-color: transparent;
+    color: white;
+    display: block;
+    margin: 40px 0px 0px 0px;
+  }
+  .search_stay::placeholder{
+    color: white;
+  }

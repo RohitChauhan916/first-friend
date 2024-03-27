@@ -52,3 +52,5 @@ function friend_setup() {
 
 }
 add_action( 'after_setup_theme', 'friend_setup');
+
+require get_template_directory() . '/inc/customizer.php';

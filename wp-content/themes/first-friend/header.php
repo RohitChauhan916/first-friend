@@ -63,8 +63,14 @@ if ( function_exists( 'wp_body_open' ) ) {
                         
                         <div class="d-flex">
                             <div class="icon_account">
+                            <a class="cart-icon" href="<?php echo wc_get_cart_url(); ?>">
+                                <span class="cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
                                 <img src="<?php echo home_url(); ?>/wp-content/themes/first-friend/assets/img/add-to-cart.png">
-                                <img src="<?php echo home_url(); ?>/wp-content/themes/first-friend/assets/img/account.png">
+                            </a>
+                            <div class="mini-cart">
+                                <?php woocommerce_mini_cart(); ?>
+                            </div>
+                                <a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/first-friend/assets/img/account.png"></a>
                             </div>
                         </div>
 

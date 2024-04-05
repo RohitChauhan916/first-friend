@@ -146,28 +146,117 @@ function category_customize_register($wp_customize){
         'choices'           =>  array('No' => 'No', 'Yes' => 'Yes')
     )));
 
-    $cf7forms_list = array();
-    $args = array('taxonomy' => 'product_cat');
-    $cf7forms = get_categories( $args ); 
-    foreach($cf7forms as $cf7form) {
-        $cf7forms_list[$cf7form] = $cf7form;
-    }
+    //one
+    $wp_customize->add_setting('cat-image-one', array(
+        'default'           => '',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'absint'
+    ));
 
-    $wp_customize->add_setting( 'sample_default_dropdownpages',
-   array(
-      'transport' => 'refresh',
-      'sanitize_callback' => 'first_friend_category_sanitize_select'
-   )
-);
- 
-$wp_customize->add_control( 'sample_default_dropdownpages',
-   array(
-      'label' => __( 'Default Dropdown Pages Control' ),
-      'description' => esc_html__( 'Sample description' ),
-      'section' => 'first-friend_category_section',
-      'choices'  => $cf7forms_list,
-      'type'     => 'select'
-   ));
+    $wp_customize->add_control( new WP_Customize_Media_Control($wp_customize, 'cat-image-one-control', array(
+        'label'    => 'First Category Image',
+        'section'  => 'first-friend_category_section',
+        'settings' => 'cat-image-one',
+    )));
+
+    $wp_customize->add_setting('cat_title_one', array(
+        'default'           => '',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'cat_title_one_control', array(
+        'label'    => 'Cat Title One',
+        'section'  => 'first-friend_category_section',
+        'settings' => 'cat_title_one',
+        'type'     => 'text'
+    )));
+
+    $wp_customize->add_setting('cat_url_one', array(
+        'default'           => '#',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'cat_url_one_control', array(
+        'label'    => 'Cat One Url',
+        'section'  => 'first-friend_category_section',
+        'settings' => 'cat_url_one',
+    )));
+
+    //two
+    $wp_customize->add_setting('cat-image-two', array(
+        'default'           => '',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'absint'
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control($wp_customize, 'cat-image-two-control', array(
+        'label'    => 'Two Category Image',
+        'section'  => 'first-friend_category_section',
+        'settings' => 'cat-image-two',
+    )));
+
+    $wp_customize->add_setting('cat_title_two', array(
+        'default'           => '',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'cat_title_two_control', array(
+        'label'    => 'Cat Title Two',
+        'section'  => 'first-friend_category_section',
+        'settings' => 'cat_title_two',
+        'type'     => 'text'
+    )));
+
+    $wp_customize->add_setting('cat_url_two', array(
+        'default'           => '#',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'cat_url_two_control', array(
+        'label'    => 'Cat Two Url',
+        'section'  => 'first-friend_category_section',
+        'settings' => 'cat_url_two',
+    )));
+
+    //three
+
+    $wp_customize->add_setting('cat-image-three', array(
+        'default'           => '',
+        'type'              => 'theme_mod',
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'absint'
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Media_Control($wp_customize, 'cat-image-three-control', array(
+        'label'    => 'Third Category Image',
+        'section'  => 'first-friend_category_section',
+        'settings' => 'cat-image-three',
+    )));
+
+    $wp_customize->add_setting('cat_title_three', array(
+        'default'           => '',
+        'sanitize_callback' => 'wp_filter_nohtml_kses'
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'cat_title_three_control', array(
+        'label'    => 'Cat Title Three',
+        'section'  => 'first-friend_category_section',
+        'settings' => 'cat_title_three',
+        'type'     => 'text'
+    )));
+
+    $wp_customize->add_setting('cat_url_three', array(
+        'default'           => '#',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'cat_url_three_control', array(
+        'label'    => 'Cat Third Url',
+        'section'  => 'first-friend_category_section',
+        'settings' => 'cat_url_three',
+    )));
 
 }
 add_action('customize_register', 'category_customize_register');

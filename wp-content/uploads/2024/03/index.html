@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wall Detection Paint</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    canvas {
+        border: 2px solid #000;
+    }
+</style>
+</head>
+<body>
+    <canvas id="paintCanvas" width="800" height="400"></canvas>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('paintCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            let isPainting = false;
+
+            canvas.addEventListener('mousedown', startPaint);
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', stopPaint);
+            canvas.addEventListener('mouseleave', stopPaint);
+
+            function startPaint(event) {
+                isPainting = true;
+                draw(event);
+            }
+
+            function draw(event) {
+                if (!isPainting) return;
+                
+                const x = event.offsetX;
+                const y = event.offsetY;
+
+                // Check if the pixel at (x, y) is on the wall (here assumed to be black)
+                const pixel = ctx.getImageData(x, y, 1, 1).data;
+                const isWall = pixel[0] === 0 && pixel[1] === 0 && pixel[2] === 0;
+
+                // Set the paint color based on wall detection
+                ctx.fillStyle = isWall ? 'red' : 'blue';
+                ctx.fillRect(x, y, 5, 5); // Adjust the size of the paint brush as needed
+            }
+
+            function stopPaint() {
+                isPainting = false;
+            }
+        });
+    </script>
+</body>
+</html>

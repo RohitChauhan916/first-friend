@@ -623,3 +623,16 @@ input[type=number] {
   padding: 0px 5px;
  font-size: 24px;
 }
+.proddesc{
+  width: 50%;
+ 
+  display: flex;
+  flex-direction: column;
+}
+.prddes{
+  display: none;
+}
+.proddesc h2{
+  width: 100%;
+  text-align: left !important;
+}

@@ -206,3 +206,11 @@ function move_single_product_price() {
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
     add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 29);
 }
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+function woocommerce_template_product_description() {
+    echo '<div class="proddesc">';
+    wc_get_template( 'single-product/tabs/description.php' );
+    echo '</div></div>';
+     }
+     add_action( 'woocommerce_after_single_product_summary', 'woocommerce_template_product_description', 60 );

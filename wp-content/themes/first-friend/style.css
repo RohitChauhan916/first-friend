@@ -416,7 +416,7 @@ body{
 }
 .price{
   color: #82597C !important;
-  font-size: 15px !important;
+  font-size: 20px !important;
   font-weight: 700 !important;
 }
 .woocommerce-ordering{
@@ -600,4 +600,26 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+.color-variable-item{
+  width: 80px !important;
+  height: 40px !important;
+  border: none !important;
+  padding: 0 !important; 
+}
+.variations .label{
+  display: none !important;
+}
+.quantity{
+  font-size: 20px;
+  width: 100px;
+}
+.quantity .qty{
+  border: none;
+  width: 30px !important;
+}
+.quantity button{
+  border: none;
+  padding: 0px 5px;
+ font-size: 24px;
 }

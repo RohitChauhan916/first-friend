@@ -51,6 +51,9 @@ function friend_setup() {
      register_nav_menu('primary', 'primary');
 
 	 add_theme_support( 'woocommerce' );
+     add_theme_support( 'wc-product-gallery-zoom' );
+     add_theme_support( 'wc-product-gallery-slider' );
+     add_theme_support( 'wc-product-gallery-lightbox' );
 
 }
 add_action( 'after_setup_theme', 'friend_setup');
@@ -196,3 +199,10 @@ function bbloomer_add_cart_quantity_plus_minus() {
 		  });
 	" );
  }
+
+ add_action('woocommerce_single_product_summary', 'move_single_product_price', 1);
+ 
+function move_single_product_price() {
+    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+    add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 29);
+}

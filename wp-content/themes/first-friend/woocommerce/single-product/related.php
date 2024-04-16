@@ -20,8 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( $related_products ) : ?>
-<div></div>
-</br>
 	<section class="related products rel_pr">
 	
 		<?php

@@ -38,7 +38,7 @@
                 if ($about_data_image){
             ?>
 
-                <img src="<?php echo esc_html($about_data_image)?>">
+                <img src="<?php echo esc_html($about_data_image)?>" width="100%">
                 
             <?php } ?>
             </div>
@@ -194,7 +194,7 @@ wp_reset_query();
         <h2 class="back_icon">Reviews</h2>
         <img src="<?php echo home_url(); ?>/wp-content/themes/first-friend/assets/img/Group 1160444247.png">
         <div class="follow_us">
-            <img class="follow" src="<?php echo home_url(); ?>/wp-content/themes/first-friend/assets/img/follow us.png">
+            <img class="follow" src="<?php echo home_url(); ?>/wp-content/themes/first-friend/assets/img/follow us.png" width="100%">
         </div>
     </div>
         <div class="touch" style="background: url('<?php echo home_url(); ?>/wp-content/themes/first-friend/assets/img/Rectangle.png') no-repeat;">

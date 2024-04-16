@@ -46,6 +46,7 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
+</div>
 <?php
 get_footer( 'shop' );
 

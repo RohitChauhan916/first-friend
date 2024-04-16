@@ -200,17 +200,11 @@ function bbloomer_add_cart_quantity_plus_minus() {
 	" );
  }
 
- add_action('woocommerce_single_product_summary', 'move_single_product_price', 1);
- 
-function move_single_product_price() {
-    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
-    add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 29);
+ function remove_product_tabs( $tabs ) {
+    unset( $tabs['additional_information'] ); // Remove the additional information tab
+    unset( $tabs['reviews'] );               // Remove the reviews tab
+    return $tabs;
 }
+add_filter( 'woocommerce_product_tabs', 'remove_product_tabs', 98 );
 
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
-function woocommerce_template_product_description() {
-    echo '<div class="proddesc">';
-    wc_get_template( 'single-product/tabs/description.php' );
-    echo '</div></div>';
-     }
-     add_action( 'woocommerce_after_single_product_summary', 'woocommerce_template_product_description', 60 );
+

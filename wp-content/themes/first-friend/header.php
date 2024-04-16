@@ -15,6 +15,9 @@ if ( function_exists( 'wp_body_open' ) ) {
 
         <header>
             <div class="container">
+              <div class="nav_con">
+                <div class="row">
+                  <div class="col-lg-10 col-md-9">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
                       <a class="navbar-brand" href="#">
@@ -60,8 +63,13 @@ if ( function_exists( 'wp_body_open' ) ) {
                           </li>
                           
                         </ul>
-                        
-                        <div class="d-flex">
+
+                      </div>
+                    </div>
+                  </nav>
+                  </div>
+                  <div class="col-lg-2 col-md-3">
+                  <div class="d-flex cart_acc">
                             <div class="icon_account">
                             <a class="cart-icon" href="<?php echo wc_get_cart_url(); ?>">
                                 <span class="cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
@@ -73,9 +81,8 @@ if ( function_exists( 'wp_body_open' ) ) {
                                 <a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>"><img src="<?php echo home_url(); ?>/wp-content/themes/first-friend/assets/img/account.png"></a>
                             </div>
                         </div>
-
-                      </div>
-                    </div>
-                  </nav>
+                  </div>
+            </div>
+            </div>
             </div>
         </header>
